@@ -153,7 +153,11 @@ namespace BrunoMikoski.ServicesLocation
 
             if (targetType.IsSubclassOf(typeof(Object)))
             {
+#if UNITY_6000_0_OR_NEWER
+                targetInstance = FindFirstObjectByType(targetType);
+#else
                 targetInstance = Object.FindObjectOfType(targetType);
+#endif
                 if (targetInstance != null)
                 {
                     serviceTypeToInstances.Add(targetType, targetInstance);

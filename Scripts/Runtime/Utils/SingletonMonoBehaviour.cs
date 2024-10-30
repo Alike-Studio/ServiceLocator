@@ -23,7 +23,11 @@ namespace BrunoMikoski.ServicesLocation
             {
                 if (!hasInstance)
                 {
+#if UNITY_6000_0_OR_NEWER
+                    instance = FindFirstObjectByType<T>();
+#else
                     instance = FindObjectOfType<T>();
+#endif
                     if (instance == null)
                     {
                         GameObject obj = new GameObject
