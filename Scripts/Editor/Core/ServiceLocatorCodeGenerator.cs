@@ -106,7 +106,7 @@ namespace BrunoMikoski.ServicesLocation
             if (!Directory.Exists(targetScriptFolder))
                 Directory.CreateDirectory(targetScriptFolder);
 
-            string assetPath = Path.Combine(targetScriptFolder, servicesClassName + ".cs");
+            string assetPath = Path.Combine(targetScriptFolder, servicesClassName + ".g.cs");
 
             Dictionary<string, List<ServiceImplementationAttribute>> categoryToAttributesList = GetAvailableServices();
 
