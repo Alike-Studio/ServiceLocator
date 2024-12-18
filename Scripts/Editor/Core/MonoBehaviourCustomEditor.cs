@@ -6,7 +6,6 @@ using UnityEditor;
 
 namespace BrunoMikoski.ServicesLocation
 {
-    [CustomEditor(typeof(MonoBehaviour), true)]
     public class MonoBehaviourCustomEditor : Editor
     {
         private static Dictionary<Type, string> typeToDisplayInfo = new();
